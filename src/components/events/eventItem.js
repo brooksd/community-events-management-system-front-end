@@ -42,4 +42,4 @@ const eventItem = (props) => {
   )
 }
 
-export default eventItem
+export default eventItem;
