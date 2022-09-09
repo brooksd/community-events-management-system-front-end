@@ -1,7 +1,7 @@
 import eventItem from "./eventItem";
 import classes from "./eventList.module.css";
 
-function eventList(props) {
+function EventsList(props) {
   return (
     <ul className={classes.list}>
       {props.events.map((eventMeetup) => (
@@ -17,4 +17,4 @@ function eventList(props) {
   );
 }
 
-export default eventList;
+export default EventsList;

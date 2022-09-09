@@ -4,7 +4,7 @@ import Card from '../ui/Card'
 import FavoritesContext from '../Context/favouritesContext'
 import classes from "./eventItem.module.css"
 
-const eventItem = (props) => {
+const EventsItem = (props) => {
     const favContext = useContext(FavoritesContext);
 
     const itemIsFavorite = favContext.itemIsFavorite(props.id);
@@ -42,4 +42,4 @@ const eventItem = (props) => {
   )
 }
 
-export default eventItem;
+export default EventsItem;
