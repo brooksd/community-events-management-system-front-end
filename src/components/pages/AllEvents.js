@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import eventList from "../events/eventList";
+import EventsList from "../events/EventsList";
 
 function AllEventsPage() {
   const [isLoading, setIsLoading] = useState(true);
@@ -38,7 +38,7 @@ function AllEventsPage() {
   return (
     <section>
       <h1>All Meetup Page</h1>
-      <eventList eventMeetups={loadedMeetups} />
+      <EventsList eventMeetups={loadedMeetups} />
     </section>
   );
 }
