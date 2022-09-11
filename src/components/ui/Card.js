@@ -1,10 +1,18 @@
-import React from 'react'
-import classes from "./Card.module.css"
+import { useLocation } from "react-router-dom";
+import classes from "./Card.module.css";
 
-const Card = (props) => {
+const Card = ({ children, isFavorite }) => {
+  let location = useLocation();
+
   return (
-    <div className={classes.card}>{props.children}</div>
-  )
-}
+    <div
+      className={`${classes.card} 
+  ${isFavorite && location.pathname === "/" ? classes.favMark : ""}
+  `}
+    >
+      {children}
+    </div>
+  );
+};
 
-export default Card
+export default Card;
