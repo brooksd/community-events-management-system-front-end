@@ -1,0 +1,31 @@
+.actions {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.actions button {
+  font: inherit;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid #006f7a;
+  color: #006f7a;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+}
+
+.actions button:hover,
+.actions button:active {
+  background-color: #e2dcd1;
+}
+
+.actions .add:hover {
+  color: seagreen;
+  border: 1px solid seagreen;
+}
+
+.actions .delete:hover {
+  color: #cc3035;
+  border: 1px solid #cc3035;
+}
