@@ -52,7 +52,7 @@ export const MeetupsContextProvider = ({ children }) => {
   useEffect(() => {
     if (useServerData) {
       fetch(
-        "https://meetupp-c7ff3-default-rtdb.europe-west1.firebasedatabase.app/meetups.json"
+        "http://localhost:9292/events"
       )
         .then((response) => {
           return response.json();
@@ -85,7 +85,7 @@ export const MeetupsContextProvider = ({ children }) => {
   const addNewMeetup = (newMeetup) => {
     if (useServerData) {
       fetch(
-        "https://meetupp-c7ff3-default-rtdb.europe-west1.firebasedatabase.app/meetups.json",
+        "http://localhost:9292/events",
         {
           method: "POST",
           body: JSON.stringify(newMeetup),
@@ -109,7 +109,7 @@ export const MeetupsContextProvider = ({ children }) => {
   const deleteMeetup = (meetupId) => {
     if (useServerData) {
       fetch(
-        `https://meetupp-c7ff3-default-rtdb.europe-west1.firebasedatabase.app/meetups/${meetupId}.json`,
+        `http://localhost:9292/events/${meetupId}`,
         { method: "DELETE" }
       ).then(() => {
         navigate("/", { replace: true });
@@ -140,7 +140,7 @@ export const MeetupsContextProvider = ({ children }) => {
   const toggleFavorite = (meetupId, favoriteStatus) => {
     if (useServerData) {
       fetch(
-        `https://meetupp-c7ff3-default-rtdb.europe-west1.firebasedatabase.app/meetups/${meetupId}.json`,
+        `http://localhost:9292/events/${meetupId}`,
         {
           method: "PATCH",
           body: JSON.stringify({ isFavorite: !favoriteStatus }),

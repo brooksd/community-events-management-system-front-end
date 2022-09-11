@@ -10,7 +10,7 @@ const Header = () => {
       <MainNavigation />
       <div className={classes.info}>
         <div className={classes.title}>
-          Meet <span className={classes.flipA}>U</span>pp
+          Event Cen<span className={classes.flipA}>t</span>ral
         </div>
         <ul className={classes.versions}>
           <p>
