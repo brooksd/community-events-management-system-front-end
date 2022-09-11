@@ -1,0 +1,7 @@
+p strong {
+  font-weight: bold;
+}
+p strong:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
