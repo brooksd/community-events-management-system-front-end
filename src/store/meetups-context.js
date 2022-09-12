@@ -52,7 +52,7 @@ export const MeetupsContextProvider = ({ children }) => {
   useEffect(() => {
     if (useServerData) {
       fetch(
-        "http://localhost:9292/events"
+        "https://ruby-project-app.herokuapp.com/events/events"
       )
         .then((response) => {
           return response.json();
@@ -85,7 +85,7 @@ export const MeetupsContextProvider = ({ children }) => {
   const addNewMeetup = (newMeetup) => {
     if (useServerData) {
       fetch(
-        "http://localhost:9292/events",
+        "https://ruby-project-app.herokuapp.com/events/events",
         {
           method: "POST",
           body: JSON.stringify(newMeetup),
@@ -109,7 +109,7 @@ export const MeetupsContextProvider = ({ children }) => {
   const deleteMeetup = (meetupId) => {
     if (useServerData) {
       fetch(
-        `http://localhost:9292/events/${meetupId}`,
+        `https://ruby-project-app.herokuapp.com/events/${meetupId}`,
         { method: "DELETE" }
       ).then(() => {
         navigate("/", { replace: true });
@@ -140,7 +140,7 @@ export const MeetupsContextProvider = ({ children }) => {
   const toggleFavorite = (meetupId, favoriteStatus) => {
     if (useServerData) {
       fetch(
-        `http://localhost:9292/events/${meetupId}`,
+        `https://ruby-project-app.herokuapp.com/events/${meetupId}`,
         {
           method: "PATCH",
           body: JSON.stringify({ isFavorite: !favoriteStatus }),
